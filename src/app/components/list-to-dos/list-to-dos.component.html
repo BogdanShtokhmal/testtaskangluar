@@ -1,0 +1,12 @@
+<form #myForm="ngForm" (ngSubmit)="save(myForm)">
+  <input type="text" name="title" [(ngModel)]="listToDo.title">
+
+  <button>save</button>
+</form>
+
+<hr>
+
+<app-list-to-do *ngFor="let listToDo of listToDos " [listToDo]="listToDo">
+
+</app-list-to-do>
+
